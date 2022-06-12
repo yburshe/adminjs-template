@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Technologies.init({
-    technologyName: DataTypes.STRING,
-    technologyLogo: DataTypes.STRING,
-    technologyCategories: DataTypes.STRING
+    Name: DataTypes.STRING,
+    Logo: DataTypes.STRING,
+    Categories: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Technologies',

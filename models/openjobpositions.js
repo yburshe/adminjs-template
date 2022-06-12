@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Industry extends Model {
+  class OpenJobPositions extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,12 +13,16 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Industry.init({
-    Name: DataTypes.STRING,
-    Disable: DataTypes.BOOLEAN
+  OpenJobPositions.init({
+    JobRole: DataTypes.STRING,
+    Title: DataTypes.STRING,
+    Experience: DataTypes.STRING,
+    Location: DataTypes.STRING,
+    URL: DataTypes.STRING,
+    Active: DataTypes.BOOLEAN
   }, {
     sequelize,
-    modelName: 'Industry',
+    modelName: 'OpenJobPositions',
   });
-  return Industry;
+  return OpenJobPositions;
 };

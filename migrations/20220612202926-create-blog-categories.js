@@ -1,21 +1,21 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Technologies', {
+    await queryInterface.createTable('BlogCategories', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      technologyName: {
+      Name: {
         type: Sequelize.STRING
       },
-      technologyLogo: {
+      Slug: {
         type: Sequelize.STRING
       },
-      technologyCategories: {
-        type: Sequelize.STRING
+      Disable: {
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
@@ -28,6 +28,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Technologies');
+    await queryInterface.dropTable('BlogCategories');
   }
 };

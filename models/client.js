@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Client.init({
-    clientName: DataTypes.STRING,
-    clientLogo: DataTypes.STRING,
-    disabled: DataTypes.STRING
+    Name: DataTypes.STRING,
+    Logo: DataTypes.STRING,
+    Disable: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Client',

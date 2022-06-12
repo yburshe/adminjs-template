@@ -1,47 +1,49 @@
 const AdminJS = require("adminjs");
-const { User, Industry, Technologies, Client } = require("../models");
-const sidebarGroups = {
-  user: {
-    name: "User Management",
-    icon: "User",
-  },
-  masterdata:{
-    name: "Master Data",
-    icon: "DataBase"
-  }
-};
+const {
+  AboutUs,
+  AIMLAutomation,
+  BigData,
+  Blog,
+  BlogCategories,
+  Careers,
+  CaseStudies,
+  Client,
+  CompanyInfo,
+  ContactUs,
+  HomePage,
+  Industry,
+  OpenJobPositions,
+  ProductDevelopment,
+  Recognition,
+  TeamMembers,
+  Technologies,
+  Testimonials,
+} = require("../models");
 const adminJS = new AdminJS({
   rootPath: "/admin",
-  loginPath: "/admin/login",
   resources: [
-    {
-      resource: User,
-      options: {
-        parent: sidebarGroups.user,
-      },
-    },
-    {
-      resource: Industry,
-      options: {
-        parent: sidebarGroups.masterdata,
-      },
-    },
-    {
-      resource: Technologies,
-      options: {
-        parent: sidebarGroups.masterdata,
-      },
-    },
-    {
-      resource: Client,
-      options: {
-        parent: sidebarGroups.masterdata,
-      },
-    },
+    AboutUs,
+    AIMLAutomation,
+    BigData,
+    Blog,
+    BlogCategories,
+    Careers,
+    CaseStudies,
+    Client,
+    CompanyInfo,
+    ContactUs,
+    HomePage,
+    Industry,
+    OpenJobPositions,
+    ProductDevelopment,
+    Recognition,
+    TeamMembers,
+    Technologies,
+    Testimonials,
   ],
   branding: {
     companyName: "Oneture",
-    softwareBrothers: false,
+    softwareBrothers: "false",
   },
 });
 module.exports = adminJS;

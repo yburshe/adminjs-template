@@ -8,8 +8,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      industryName: {
+      Name: {
         type: Sequelize.STRING
+      },
+      Disable: {
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
