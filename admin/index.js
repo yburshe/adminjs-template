@@ -1,49 +1,15 @@
 const AdminJS = require("adminjs");
 const {
-  AboutUs,
-  AIMLAutomation,
-  BigData,
-  Blog,
-  BlogCategories,
-  Careers,
-  CaseStudies,
-  Client,
-  CompanyInfo,
-  ContactUs,
-  HomePage,
-  Industry,
-  OpenJobPositions,
-  ProductDevelopment,
-  Recognition,
-  TeamMembers,
-  Technologies,
-  Testimonials,
+    // Your sidebar modules
 } = require("../models");
 const adminJS = new AdminJS({
-  rootPath: "/admin",
-  resources: [
-    AboutUs,
-    AIMLAutomation,
-    BigData,
-    Blog,
-    BlogCategories,
-    Careers,
-    CaseStudies,
-    Client,
-    CompanyInfo,
-    ContactUs,
-    HomePage,
-    Industry,
-    OpenJobPositions,
-    ProductDevelopment,
-    Recognition,
-    TeamMembers,
-    Technologies,
-    Testimonials,
-  ],
-  branding: {
-    companyName: "Oneture",
-    softwareBrothers: "false",
-  },
+    rootPath: "/admin",
+    resources: [
+        // Your sidebar modules
+    ],
+    branding: {
+        companyName: "XYZ",
+        softwareBrothers: "false",
+    },
 });
 module.exports = adminJS;
